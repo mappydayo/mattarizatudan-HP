@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>まったり雑談喫茶 | 心地よいおしゃべりが集まるDiscordコミュニティ</title>
+  
+  <!-- SEO Meta Tags -->
+  <meta name="description" content="Discordサーバー「まったり雑談喫茶」の公式ホームページです。まるでお気に入りのカフェにいるような、心地よくて温かい雰囲気の中で、日常を忘れてまったりとおしゃべりしませんか？現在110名以上が参加中。初心者の方も大歓迎です！">
+  <meta name="keywords" content="まったり雑談喫茶, Discord, 雑談サーバー, コミュニティ, カフェ風, 雑談, 友達募集, オンラインコミュニティ">
+  <meta property="og:title" content="まったり雑談喫茶 | 心地よいおしゃべりが集まるDiscordコミュニティ">
+  <meta property="og:description" content="日常を少し忘れて、まったりおしゃべりしませんか？110名以上の仲間が集まる、アットホームなDiscordサーバー「まったり雑談喫茶」の公式ホームページです。">
+  <meta property="og:image" content="assets/character.jpg">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  
+  <!-- Favicon -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>☕</text></svg>">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Kiwi+Maru:wght@300;400;500&family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
+  
+  <!-- Font Awesome for Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Navigation Header -->
+  <header class="main-header">
+    <div class="header-container">
+      <a href="#" class="logo">
+        <span class="logo-icon">☕</span>
+        <span class="logo-text">まったり雑談喫茶</span>
+      </a>
+      
+      <nav class="nav-menu" id="navMenu">
+        <ul>
+          <li><a href="#about"><i class="fa-solid fa-mug-hot"></i> はじめに</a></li>
+          <li><a href="#features"><i class="fa-solid fa-star"></i> 特徴</a></li>
+          <li><a href="#menu"><i class="fa-solid fa-clipboard-list"></i> チャンネル</a></li>
+          <li><a href="#rules"><i class="fa-solid fa-scale-balanced"></i> ルール</a></li>
+          <li><a href="#join" class="btn btn-primary btn-nav"><i class="fa-brands fa-discord"></i> 参加する</a></li>
+        </ul>
+      </nav>
+      
+      <button class="mobile-menu-toggle" id="menuToggle" aria-label="メニューを開閉する">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero-section">
+    <div class="hero-bg-shapes">
+      <div class="shape shape-1"></div>
+      <div class="shape shape-2"></div>
+    </div>
+    <div class="hero-container">
+      <div class="hero-content fade-in-up">
+        <span class="badge"><i class="fa-solid fa-mug-saucer"></i> ようこそ、やすらぎの場所へ</span>
+        <h1 class="hero-title">日常を少し忘れて、<br><span class="highlight">まったり</span>おしゃべりしませんか？</h1>
+        <p class="hero-subtitle">
+          「まったり雑談喫茶」は、お気に入りのカフェのように心地よくて温かい、アットホームなDiscordコミュニティです。他愛のないおしゃべりを楽しみましょう。
+        </p>
+        
+        <div class="hero-cta">
+          <a href="https://discord.gg/XKRWXtqz9" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-lg" id="hero-join-btn">
+            <i class="fa-brands fa-discord"></i> 喫茶店に入る（無料）
+          </a>
+          <div class="server-status" id="serverStatus">
+            <span class="status-dot online"></span>
+            <span class="status-text">総メンバー <strong>100人以上</strong> 参加中！</span>
+          </div>
+        </div>
+      </div>
+      
+      <div class="hero-visual fade-in">
+        <div class="character-frame">
+          <img src="assets/character.jpg" alt="まったり雑談喫茶のイメージイラスト" class="hero-image">
+          <div class="coffee-cup-float">☕</div>
+          <div class="leaf-float-1">🍃</div>
+          <div class="leaf-float-2">🌱</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About / Concept Section -->
+  <section id="about" class="about-section scroll-reveal">
+    <div class="about-container">
+      <div class="about-card">
+        <div class="about-icon">☕</div>
+        <h2 class="section-title">当店（当サーバー）について</h2>
+        <div class="divider"></div>
+        <p class="about-text">
+          ここは、ネットの喧騒から少し離れて、温かい飲み物を片手にホッと一息つける「喫茶店」のようなサーバーです。<br>
+          「学校や仕事帰りにちょっと喋りたい」「趣味の話を誰かと共有したい」「ただ誰かの話を聞いていたい」…そんなあなたのための場所です。
+        </p>
+        <p class="about-text">
+          ルールや管理体制が整っているため、初めてDiscordを使う方や、大人数のサーバーが苦手な方でも、安心して自分のペースでまったり過ごしていただけます。
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section id="features" class="features-section">
+    <div class="features-container">
+      <div class="section-header scroll-reveal">
+        <span class="sub-title">FEATURES</span>
+        <h2 class="section-title">「まったり雑談喫茶」の3つの魅力</h2>
+        <div class="divider"></div>
+      </div>
+      
+      <div class="features-grid">
+        <!-- Feature 1 -->
+        <div class="feature-card scroll-reveal">
+          <div class="feature-icon-wrapper">
+            <i class="fa-solid fa-heart"></i>
+          </div>
+          <h3>居心地の良いまったり感</h3>
+          <p>穏やかで優しいメンバーが集まっています。お互いを尊重しあう温かい雰囲気なので、緊張せずに会話の輪に入ることができます。</p>
+        </div>
+        
+        <!-- Feature 2 -->
+        <div class="feature-card scroll-reveal">
+          <div class="feature-icon-wrapper">
+            <i class="fa-solid fa-mug-hot"></i>
+          </div>
+          <h3>豊富なメニュー（席）</h3>
+          <p>メイン雑談のほかに、ゲームや作業、趣味の語り場、自己紹介や役職のロール付与など、あなたの気分に合わせて様々なチャンネルを選べます。</p>
+        </div>
+        
+        <!-- Feature 3 -->
+        <div class="feature-card scroll-reveal">
+          <div class="feature-icon-wrapper">
+            <i class="fa-solid fa-shield-halved"></i>
+          </div>
+          <h3>安心のセキュリティと管理</h3>
+          <p>明確なルール設定と、丁寧な管理陣のサポート体制が整っているため、荒らし行為の心配がなく、いつでも安全・快適にお過ごしいただけます。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Menu / Channels Section -->
+  <section id="menu" class="menu-section">
+    <div class="menu-container">
+      <div class="section-header scroll-reveal">
+        <span class="sub-title">MENU</span>
+        <h2 class="section-title">サーバーメニュー（チャンネル紹介）</h2>
+        <p class="section-subtitle">まるでカフェのメニューを選ぶように、あなたのお好みのチャンネルをお楽しみください。</p>
+        <div class="divider"></div>
+      </div>
+      
+      <div class="menu-board scroll-reveal">
+        <div class="board-frame">
+          <div class="board-content">
+            <h3 class="board-header"><i class="fa-solid fa-clipboard-list"></i> Menu Board</h3>
+            
+            <div class="board-sections">
+              <!-- Category 1: Info Menu -->
+              <div class="menu-category">
+                <h4><span class="menu-cat-icon">🔰</span> 案内と受付 (Info)</h4>
+                <ul class="menu-list">
+                  <li>
+                    <span class="menu-item-name">ルール案内</span>
+                    <span class="menu-item-line"></span>
+                    <span class="menu-item-badge">🔰</span>
+                    <p class="menu-item-desc">初めて来店された方への案内所。安心・安全なサーバー利用ルールが書かれています。</p>
+                  </li>
+                  <li>
+                    <span class="menu-item-name">自己紹介 ＆ ロール付与</span>
+                    <span class="menu-item-line"></span>
+                    <span class="menu-item-badge">🙇</span>
+                    <p class="menu-item-desc">自己紹介をして、趣味やゲームに合わせたロールタグ（役職）をセットしましょう。</p>
+                  </li>
+                  <li>
+                    <span class="menu-item-name">お知らせ ＆ 募集</span>
+                    <span class="menu-item-line"></span>
+                    <span class="menu-item-badge">🔔</span>
+                    <p class="menu-item-desc">喫茶店からの大切なお知らせや、ゲーム・イベント・作業の募集広場です。</p>
+                  </li>
+                </ul>
+              </div>
+              
+              <!-- Category 2: Main Menu -->
+              <div class="menu-category">
+                <h4><span class="menu-cat-icon">💬</span> 雑談と趣味 (Café Menu)</h4>
+                <ul class="menu-list">
+                  <li>
+                    <span class="menu-item-name">メイン雑談 ＆ 雑談サブ</span>
+                    <span class="menu-item-line"></span>
+                    <span class="menu-item-badge">💬</span>
+                    <p class="menu-item-desc">他愛のない日常会話から、ゆるく盛り上がるトピックまで自由に話せるメイン席。</p>
+                  </li>
+                  <li>
+                    <span class="menu-item-name">飯テロ ＆ 投稿広場</span>
+                    <span class="menu-item-line"></span>
+                    <span class="menu-item-badge">🍔</span>
+                    <p class="menu-item-desc">美味しい食事の写真（飯テロ）や、お気に入りの画像・動画・アンケートをシェア。</p>
+                  </li>
+                  <li>
+                    <span class="menu-item-name">個人フォーラム</span>
+                    <span class="menu-item-line"></span>
+                    <span class="menu-item-badge">👤</span>
+                    <p class="menu-item-desc">メンバーが個別にスレッドを作り、日記や趣味の深い話を自由に連ねられます。</p>
+                  </li>
+                </ul>
+              </div>
+
+              <!-- Category 3: Creator Menu -->
+              <div class="menu-category">
+                <h4><span class="menu-cat-icon">💡</span> クリエイター交流 (Studio)</h4>
+                <ul class="menu-list">
+                  <li>
+                    <span class="menu-item-name">個人開発勢 ＆ 初めに</span>
+                    <span class="menu-item-line"></span>
+                    <span class="menu-item-badge">🔧</span>
+                    <p class="menu-item-desc">プログラミングや個人開発を行うクリエイター達が知見を共有するクリエイティブな席。</p>
+                  </li>
+                  <li>
+                    <span class="menu-item-name">動画編集</span>
+                    <span class="menu-item-line"></span>
+                    <span class="menu-item-badge">🎬</span>
+                    <p class="menu-item-desc">YouTubeや趣味での動画制作、編集について質問や交流ができる編集室です。</p>
+                  </li>
+                  <li>
+                    <span class="menu-item-name">コマンド室</span>
+                    <span class="menu-item-line"></span>
+                    <span class="menu-item-badge">⌨️</span>
+                    <p class="menu-item-desc">Botへのコマンド呼び出しや、便利な機能などをテスト・操作できる実験スペース。</p>
+                  </li>
+                </ul>
+              </div>
+
+              <!-- Category 4: Voice Menu -->
+              <div class="menu-category">
+                <h4><span class="menu-cat-icon">🔊</span> 通話・作業席 (Terrace VC)</h4>
+                <ul class="menu-list">
+                  <li>
+                    <span class="menu-item-name">雑談 ＆ 雑談サブ VC</span>
+                    <span class="menu-item-line"></span>
+                    <span class="menu-item-badge">🗣️</span>
+                    <p class="menu-item-desc">声で直接まったりとおしゃべりできるスペース。聞き専チャンネル（テキスト）も完備。</p>
+                  </li>
+                  <li>
+                    <span class="menu-item-name">作業部屋 (マイクオフのみ)</span>
+                    <span class="menu-item-line"></span>
+                    <span class="menu-item-badge">🛠️</span>
+                    <p class="menu-item-desc">ミュートでお互いの気配を感じながら、作業や勉強に集中するための防音仕様の部屋。</p>
+                  </li>
+                  <li>
+                    <span class="menu-item-name">個通 ＆ 寝室</span>
+                    <span class="menu-item-line"></span>
+                    <span class="menu-item-badge">💤</span>
+                    <p class="menu-item-desc">1対1でじっくり話せる個通スペースや、放置・睡眠時に入れる仮眠室です。</p>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            
+            <div class="board-footer">
+              <p>※ROM専（見るだけ）でのご滞在も大歓迎です。ご自身のペースでお楽しみください。</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Rules Section -->
+  <section id="rules" class="rules-section">
+    <div class="rules-container">
+      <div class="section-header scroll-reveal">
+        <span class="sub-title">RULES</span>
+        <h2 class="section-title">気持ちよく過ごすためのマナー</h2>
+        <p class="section-subtitle">すべてのメンバーが心地よく過ごせるよう、以下のマナー（利用規約）をお願いしています。</p>
+        <div class="divider"></div>
+      </div>
+      
+      <div class="rules-grid scroll-reveal">
+        <div class="rule-item">
+          <div class="rule-number">01</div>
+          <div class="rule-body">
+            <h4>思いやりを持った発言</h4>
+            <p>発言する前に、「相手がどう受け取るか」を一歩立ち止まって考えましょう。言葉遣いは優しく、丁寧にお願いします。</p>
+          </div>
+        </div>
+        
+        <div class="rule-item">
+          <div class="rule-number">02</div>
+          <div class="rule-body">
+            <h4>迷惑行為・攻撃の禁止</h4>
+            <p>他のメンバーへの誹謗中傷、荒らし行為、強引な勧誘、同意のないDM送信などの迷惑行為は固くお断りしております。</p>
+          </div>
+        </div>
+        
+        <div class="rule-item">
+          <div class="rule-number">03</div>
+          <div class="rule-body">
+            <h4>プライバシーの尊重</h4>
+            <p>個人情報や他のメンバーのプライベートな話を外部に漏らす行為は行わないでください。安心して話せる空間を守りましょう。</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Join Us / CTA Section -->
+  <section id="join" class="join-section">
+    <div class="join-container scroll-reveal">
+      <div class="join-card">
+        <div class="join-deco">☕ ✨</div>
+        <h2>あなたも「まったり雑談喫茶」の常連客になりませんか？</h2>
+        <p>
+          参加はボタンをクリックするだけ。面倒な審査はありません。<br>
+          ドアを開ければ、そこにはいつでもあなたを歓迎する温かい空間が広がっています。
+        </p>
+        
+        <div class="steps-container">
+          <div class="step-card">
+            <span class="step-num">1</span>
+            <h5>招待リンクをクリック</h5>
+            <p>下のボタンからサーバーに参加します。</p>
+          </div>
+          <div class="step-arrow"><i class="fa-solid fa-chevron-right"></i></div>
+          <div class="step-card">
+            <span class="step-num">2</span>
+            <h5>自己紹介でご挨拶</h5>
+            <p>簡単で構いませんので、挨拶をお願いします。</p>
+          </div>
+          <div class="step-arrow"><i class="fa-solid fa-chevron-right"></i></div>
+          <div class="step-card">
+            <span class="step-num">3</span>
+            <h5>お好きな席へどうぞ</h5>
+            <p>ロールを設定して、雑談をお楽しみください！</p>
+          </div>
+        </div>
+        
+        <a href="https://discord.gg/XKRWXtqz9" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-lg pulse-animation" id="cta-join-btn">
+          <i class="fa-brands fa-discord"></i> Discordサーバーに参加する（無料）
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="main-footer">
+    <div class="footer-container">
+      <div class="footer-brand">
+        <span class="footer-logo">☕ まったり雑談喫茶</span>
+        <p>心地よく、温かい、みんなの憩いの場所。</p>
+      </div>
+      
+      <div class="footer-links">
+        <ul>
+          <li><a href="#about">はじめに</a></li>
+          <li><a href="#features">特徴</a></li>
+          <li><a href="#menu">チャンネル</a></li>
+          <li><a href="#rules">ルール</a></li>
+        </ul>
+      </div>
+      
+      <div class="footer-bottom">
+        <p>&copy; 2026 まったり雑談喫茶. All rights reserved.</p>
+        <p class="credit">Designed for Cozy Community</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Script File -->
+  <script src="script.js"></script>
+</body>
+</html>
