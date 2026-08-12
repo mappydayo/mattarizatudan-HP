@@ -493,7 +493,145 @@ ul {
   margin-bottom: 0;
 }
 
-/* 6. 特徴セクション
+/* 6. 鯖主紹介セクション
+   ========================================================================== */
+.owner-section {
+  padding: 100px 0;
+  background: linear-gradient(135deg, #f3eae0 0%, #f8edf0 52%, #eaf4f4 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.owner-section::before,
+.owner-section::after {
+  content: '';
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.owner-section::before {
+  width: 260px;
+  height: 260px;
+  top: -100px;
+  right: -70px;
+  background: rgba(244, 183, 197, 0.18);
+}
+
+.owner-section::after {
+  width: 190px;
+  height: 190px;
+  bottom: -80px;
+  left: -60px;
+  background: rgba(151, 202, 210, 0.16);
+}
+
+.owner-container {
+  max-width: 1040px;
+  margin: 0 auto;
+  padding: 0 24px;
+  position: relative;
+  z-index: 1;
+}
+
+.owner-card {
+  display: grid;
+  grid-template-columns: minmax(260px, 360px) 1fr;
+  align-items: center;
+  gap: 60px;
+  padding: 52px;
+  background: rgba(255, 255, 255, 0.92);
+  border: 1px solid rgba(78, 54, 41, 0.06);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-lg);
+}
+
+.owner-visual {
+  text-align: center;
+}
+
+.owner-image-frame {
+  aspect-ratio: 1 / 1;
+  padding: 9px;
+  background: linear-gradient(145deg, #f4b7c5, #ffffff 45%, #9bcbd2);
+  border-radius: 42% 58% 48% 52% / 52% 43% 57% 48%;
+  box-shadow: 0 18px 40px rgba(109, 77, 69, 0.18);
+  transform: rotate(-2deg);
+}
+
+.owner-image-frame img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  border-radius: inherit;
+  transform: rotate(2deg);
+}
+
+.owner-role {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 22px;
+  padding: 9px 18px;
+  color: var(--text-primary);
+  background: #fff5f7;
+  border: 1px solid rgba(208, 123, 79, 0.18);
+  border-radius: 999px;
+  font-size: 0.92rem;
+  font-weight: 700;
+}
+
+.owner-role i {
+  color: var(--accent);
+}
+
+.owner-content .section-title {
+  margin-top: 6px;
+  font-size: 2.25rem;
+}
+
+.owner-divider {
+  margin-left: 0;
+}
+
+.owner-lead {
+  color: var(--text-primary) !important;
+  font-family: var(--font-heading);
+  font-size: 1.25rem !important;
+  font-weight: 500;
+}
+
+.owner-content p {
+  color: var(--text-secondary);
+  font-size: 1rem;
+  line-height: 1.9;
+  margin-bottom: 1rem;
+}
+
+.owner-values {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 28px;
+}
+
+.owner-values span {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 8px 13px;
+  color: var(--text-secondary);
+  background: var(--bg-primary);
+  border-radius: 999px;
+  font-size: 0.82rem;
+}
+
+.owner-values i {
+  color: var(--accent);
+}
+
+/* 7. 特徴セクション
    ========================================================================== */
 .features-section {
   padding: 100px 0;
@@ -1114,6 +1252,33 @@ ul {
     grid-template-columns: 1fr;
     gap: 20px;
   }
+
+  .owner-card {
+    grid-template-columns: 1fr;
+    gap: 38px;
+    padding: 40px 28px;
+  }
+
+  .owner-image-frame {
+    max-width: 300px;
+    margin: 0 auto;
+  }
+
+  .owner-content {
+    text-align: center;
+  }
+
+  .owner-content .section-title {
+    font-size: 2rem;
+  }
+
+  .owner-divider {
+    margin-left: auto;
+  }
+
+  .owner-values {
+    justify-content: center;
+  }
   
   /* メニュー黒板 */
   .board-sections {
@@ -1147,6 +1312,16 @@ ul {
   }
   .about-card {
     padding: 40px 20px;
+  }
+  .owner-section {
+    padding: 72px 0;
+  }
+  .owner-card {
+    padding: 30px 20px;
+  }
+  .owner-values {
+    align-items: center;
+    flex-direction: column;
   }
   .board-content {
     padding: 20px 15px;
